@@ -1,11 +1,7 @@
 import 'package:flame/components.dart';
-import 'package:flutter/material.dart';
 
-class Player extends PositionComponent {
-  static final _paint = Paint()..color = Colors.white;
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas);
-    canvas.drawRect(size.toRect(), _paint);
+class Player extends SpriteComponent {
+  void move(Vector2 delta) {
+    position.add(delta);
   }
 }
